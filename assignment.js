@@ -1,5 +1,3 @@
-// 
-
 // solution no: 1
 function kilometerToMeter(kilometer){
     if(kilometer <= -1){
@@ -37,15 +35,15 @@ function hotelCost(days){
     }
     else if(days >= 11 && days <= 20){
         cost = 10 * 100
-        days -= 10
-        cost += days * 80
+        days = days - 10
+        cost = cost + days * 80
     }
     else{
         cost = 10 * 100
-        days -= 10
-        cost += 10 * 80
-        days -= 10
-        cost += days * 50
+        days = days - 10
+        cost = cost + 10 * 80
+        days = days - 10
+        cost = cost + days * 50
     }
     return cost;
 }
@@ -55,14 +53,14 @@ function hotelCost(days){
 //solution 4
 function megaFriend(friends){
     var maximum = 0;
-    var answer = '';
+    var result = '';
     for(var i = 0; i < friends.length; i++){
         var friendsName = friends[i];
         var nameLength = friendsName.length;
         if(nameLength > maximum){
-            answer = friendsName;
-            maxi = nameLength;
+            result = friendsName;
+            maximum = nameLength;
         }
     }
-    return answer;   
+    return result;   
 }
